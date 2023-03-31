@@ -76,30 +76,122 @@ const count = ref(0)
                     </div>
 
                     <div class="col-12">
-                        <Card class="tabla-container">
+                        <Card>
                             <template #content>
-                                <table>
-                                    <tr>
-                                        <td>Columna 1</td>
-                                        <td>Columna 2</td>
-                                        <td>Columna 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fila 1, Celda 1</td>
-                                        <td>Fila 1, Celda 2</td>
-                                        <td>Fila 1, Celda 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fila 2, Celda 1</td>
-                                        <td>Fila 2, Celda 2</td>
-                                        <td>Fila 2, Celda 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fila 3, Celda 1</td>
-                                        <td>Fila 3, Celda 2</td>
-                                        <td>Fila 3, Celda 3</td>
-                                    </tr>
-                                </table>
+                                <div class="tabla-container">
+                                    <table>
+                                        <col width="500">
+                                        <col>
+                                        <col>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="font-bold text-1xl" style="color: black;">
+                                                        CARACTERÍSTICAS
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="text-center">
+                                                    <span class="font-bold text-1xl" style="color: black;">
+                                                        OTROS
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="text-center">
+                                                    <span class="font-bold text-2xl" style="color: black;">
+                                                        ATOMIC
+                                                    </span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="text-1xl" style="color: black;">
+                                                        Equipo inclusivo, honesto y auténtico
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="text-1xl" style="color: black;">
+                                                        Puntualidad es nuestro segundo nombre
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="text-1xl" style="color: black;">
+                                                        Siempre innovamos en nuestros productos
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="text-1xl" style="color: black;">
+                                                        Te ayudaremos a crecer e implementar nuevos conocimientos
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="text-1xl" style="color: black;">
+                                                        Nos preocupamos por tu bienestar
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="text-left">
+                                                    <span class="text-1xl" style="color: black;">
+                                                        El respeto es una parte fundamental
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </template>
                         </Card>
                     </div>
@@ -131,12 +223,16 @@ const count = ref(0)
     border-top-right-radius: 10em;
 }
 
+.p-button.p-button-info {
+    color: #2d6cf5;
+    background: #ffffff;
+}
+
 .title-section {
     position: absolute;
     margin-top: -20em;
     margin-left: 28%;
 }
-
 
 .container {
     display: inline-block;
@@ -162,7 +258,9 @@ const count = ref(0)
 }
 
 .tabla-container {
-    padding: 10px;
+    border-radius: 10px;
+    padding: 1.2em;
+    background-color: white;
 }
 
 table {
@@ -170,19 +268,13 @@ table {
     width: 100%;
 }
 
-th,
 td {
-    border: 1px solid black;
-    padding: 5px;
-}
-
-td {
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-top: 1px solid rgba(0, 0, 0, 0.192);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.192);
-    border-left: 1px solid rgba(0, 0, 0, 0.192);
-    border-right: 1px solid rgba(0, 0, 0, 0.192);
-    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px;
 }
 
 td:last-child {
@@ -194,11 +286,27 @@ td:nth-child(2) {
     background-color: #ffffff;
 }
 
-tr:last-child td {
+tr:first-child td {
     border-bottom: none;
+    border-top: none;
 }
 
-tr:not(:last-child) td:last-child {
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3) {
+    border-top: none;
+}
+
+td:first-child {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+td:last-child {
     border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
 }
 </style>

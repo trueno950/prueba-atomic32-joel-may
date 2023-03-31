@@ -1,7 +1,12 @@
+html {
+  margin-top: -6em;
+}
+
 body {
   background-image: url('./assets/Mask Group 1.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0; /* agregado */
+  margin: 0;
+  margin-top: 7em;
 }

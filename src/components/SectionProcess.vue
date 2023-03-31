@@ -56,20 +56,6 @@ const count = ref(0)
     box-shadow: none;
 }
 
-.p-card-header img {
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 20px;
-    width: 10%;
-}
-
-.astronauta {
-    background-image: url('../assets/Group 4032.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 .p-button.p-button-info {
     color: #2d6cf5;
     background: #ffffff;
