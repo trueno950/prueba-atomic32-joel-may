@@ -2,6 +2,7 @@
 import Header from './components/Header.vue'
 import SectionInfo from './components/SectionInfo.vue'
 import SectionProcess from './components/SectionProcess.vue'
+import SectionQuestion from './components/SectionQuestion.vue';
 
 </script>
 
@@ -10,6 +11,8 @@ import SectionProcess from './components/SectionProcess.vue'
     <Header />
     <SectionInfo />
     <SectionProcess />
+    <SectionQuestion />
+
 
   </div>
 </template>
