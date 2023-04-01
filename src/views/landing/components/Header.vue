@@ -25,10 +25,10 @@ export default {
       </template>
       <template #content>
         <div class="grid mt-3">
-          <div class="col-6">
+          <div class="lg:col-6 sm:col-12 sm:col-12">
             <img src="../../../assets/Group 4032.png" class="ml-7">
           </div>
-          <div class="col-6 align-content-center">
+          <div class="lg:col-6 sm:col-12 sm:col-12 align-content-center">
             <div class="flex align-items-center justify-content-center">
               <p class="text-justify">
                 <span class="font-bold" style="color: white; font-size: 4.2em;">Desarrolla todo </span><br />

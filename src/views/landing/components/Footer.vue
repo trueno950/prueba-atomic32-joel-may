@@ -12,19 +12,21 @@ export default {
 
 <template>
     <div class="grid footer-contain p-component">
-        <div class="col-8">
-            <p class="ml-7">
-                <span class="font-bold text-1xl">2023 AtomicLabs. Todos los derechos reservados.</span>
+        <div class="sm:col-12 md:col-6 lg:col-8">
+            <p class="">
+                <span class="font-bold text-1xl">2023 AtomicLabs. Todos los derechos reservados. </span>
             </p>
         </div>
-        <div class="col-2">
+        <div class="sm:col-10 md:col-4 lg:col-2">
             <p class="text-left custom-text" @click="visible = true">
                 <span class="font-bold text-1xl underline">Aviso de privacidad</span>
             </p>
         </div>
-        <div class="col-2">
+        <div class="sm:col-1 md:col-1 lg:col-1">
             <img alt="" src="../../../assets/linkedin.png" />
-            <img alt="" src="../../../assets/twitter.png" class="ml-5" />
+        </div>
+        <div class="sm:col-1 md:col-1 lg:col-1">
+            <img alt="" src="../../../assets/twitter.png" class="mt-2" />
         </div>
     </div>
 

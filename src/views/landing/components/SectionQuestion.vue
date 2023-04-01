@@ -15,17 +15,21 @@ export default {
     <div>
         <Card class="section-question">
             <template #header>
-                <div class="flex align-items-center justify-content-center title-section">
-                    <p class="text-center white-space-nowrap">
-                        <span class="font-bold text-7xl" style="color: white;">¿POR QUÉ </span>
-                        <span class="font-bold text-7xl" style="color: orangered;"> ATOMIC?</span><br />
-                    </p>
+                <div class="grid">
+                    <div class="col-12 align-content-center">
+                        <div class="flex align-items-center justify-content-center title-section">
+                            <p class="text-cente">
+                                <span class="font-bold text-7xl" style="color: white;">¿POR QUÉ </span>
+                                <span class="font-bold text-7xl" style="color: orangered;"> ATOMIC?</span><br />
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </template>
             <template #content>
                 <div class="grid content-section">
-                    <div class="col-4 align-items-center justify-content-center">
-                        <img src="../../../assets/Group 4041.png" alt="Mi imagen" class="image-card">
+                    <div class="sm:col-12 md:col-6 lg:col-4 align-items-center justify-content-center">
+                        <img src="../../../assets/Group 4041.png" alt="" class="image-card">
                         <div class="container">
                             <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
@@ -43,7 +47,7 @@ export default {
                             </p>
                         </div>
                     </div>
-                    <div class="col-4 align-items-center justify-content-center">
+                    <div class="sm:col-12 md:col-6 lg:col-4 align-items-center justify-content-center">
                         <img src="../../../assets/Group 4042.png" alt="" class="image-card">
                         <div class="container">
                             <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
@@ -62,7 +66,7 @@ export default {
                             </p>
                         </div>
                     </div>
-                    <div class="col-4 align-items-center justify-content-center">
+                    <div class="sm:col-12 md:col-6 lg:col-4 align-items-center justify-content-center">
                         <img src="../../../assets/Group 4043.png" alt="" class="image-card">
                         <div class="container">
                             <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
@@ -210,6 +214,10 @@ export default {
 </template>
 
 <style scoped>
+.grid {
+    margin: 0;
+}
+
 .section-question {
     margin-top: 22em
 }
@@ -219,6 +227,7 @@ export default {
     margin-top: -12em;
     margin-left: 4em;
     margin-right: 4em;
+    margin: 0px;
 }
 
 .p-card {

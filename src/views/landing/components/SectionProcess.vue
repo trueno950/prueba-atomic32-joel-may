@@ -15,29 +15,35 @@ export default {
     <div>
         <Card class="info">
             <template #header>
-                <div class="flex align-items-center justify-content-center">
-                    <p class="text-center white-space-nowrap">
-                        <span class="font-bold text-7xl" style="color: white;">¡TE ENCANTARÁ </span><br />
-                        <span class="font-bold text-7xl" style="color: orangered;"> TRABAJAR CON NOSOTROS!</span><br />
-                    </p>
+                <div class="grid">
+                    <div class="col-12 align-content-center">
+                        <div class="flex align-items-center justify-content-center">
+                        <p class="text-center">
+                            <span class="font-bold text-7xl" style="color: white;">¡TE ENCANTARÁ </span><br />
+                            <span class="font-bold text-7xl" style="color: orangered;"> TRABAJAR CON NOSOTROS!</span><br />
+                        </p>
+                    </div>
+                    </div>
                 </div>
             </template>
             <template #content>
-                <div class="grid">
-                    <div class="col-12 team" />
-                    <div class="col-3 ml-7 flex align-items-center justify-content-center">
+                <div class="grid ml-5">
+                    <div class="col-12" >
+                        <img src="../../../assets/Group 4040.png" alt="">
+                    </div>
+                    <div class="sm:col-6 md:col-4 lg:col-3 flex align-items-center justify-content-center">
                         <p><span class="font-bold text-2xl" style="color: white;">Contratación remota</span></p>
                         <i class="pi pi-arrow-right mr-6" style="color: orangered; font-size: 2rem;"></i>
                     </div>
-                    <div class="col-3 ml-4 flex align-items-center justify-content-center">
+                    <div class="sm:col-6 md:col-4 lg:col-3 flex align-items-center justify-content-center">
                         <p><span class="font-bold text-2xl" style="color: white;">Entrevista con el área de RH</span></p>
                         <i class="pi pi-arrow-right ml-5" style="color: orangered; font-size: 2rem;"></i>
                     </div>
-                    <div class="col-2 ml-6 flex align-items-center justify-content-center">
+                    <div class="sm:col-6 md:col-4 lg:col-3 flex align-items-center justify-content-center">
                         <p><span class="font-bold text-2xl" style="color: white;">Prueba práctica</span></p>
                         <i class="pi pi-arrow-right ml-6" style="color: orangered; font-size: 2rem;"></i>
                     </div>
-                    <div class="col-1 ml-7 flex align-items-center justify-content-center">
+                    <div class="sm:col-6 md:col-4 lg:col-3 flex align-items-center justify-content-center">
                         <p><span class="font-bold text-2xl " style="color: white;">Entrevista técnica</span></p>
                     </div>
                 </div>
@@ -48,13 +54,6 @@ export default {
 </template>
 
 <style scoped>
-.team {
-    background-image: url('../../../assets/Group 4040.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25em;
-}
-
 .p-card {
     background: transparent;
     margin: 2em;

@@ -8,11 +8,15 @@ const count = ref(0)
     <div id="info">
         <Card class="info">
             <template #header>
-                <div class="flex align-items-center justify-content-center">
-                    <p class="text-center white-space-nowrap">
-                        <span class="font-bold text-7xl" style="color: white;">SOMOS EL BRAZO DERECHO </span><br />
-                        <span class="font-bold text-7xl" style="color: orangered;">DE LA TECNOLOGÍA </span><br />
-                    </p>
+                <div class="grid">
+                    <div class="col-12 align-content-center">
+                        <div class="flex align-items-center justify-content-center">
+                            <p class="text-center">
+                                <span class="font-bold text-7xl" style="color: white;">SOMOS EL BRAZO DERECHO </span><br />
+                                <span class="font-bold text-7xl" style="color: orangered;">DE LA TECNOLOGÍA </span><br />
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </template>
             <template #content>
@@ -150,7 +154,7 @@ const count = ref(0)
     box-shadow: none;
 }
 
-p{
+p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
