@@ -2,12 +2,17 @@
 import ButtonForm from './ButtonForm.vue';
 
 export default {
-    components: {
-        ButtonForm
-    },
-    setup() {
-
+  components: {
+    ButtonForm
+  },
+  setup() {
+    const goToInfo = () =>{
+      window.location.href = '#info';
     }
+    return {
+      goToInfo
+    }
+  }
 }
 </script>
 
@@ -38,12 +43,13 @@ export default {
         </div>
       </template>
       <template #footer>
-        <div class="flex align-items-center justify-content-center">
+        <div class="flex align-items-center justify-content-center" @click="goToInfo">
           <Button icon="pi pi-chevron-down" severity="secondary" rounded outlined aria-label="Filter" /><br />
         </div>
         <p class="text-center">
-          <span class="font-bold text-1xl" style="color: white;">Quiero saber más</span>
-        </p>
+          <a href="#info">
+            <span class="font-bold text-1xl" style="color: white;">Quiero saber más</span>
+          </a></p>
       </template>
     </Card>
   </div>

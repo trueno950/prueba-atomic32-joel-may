@@ -5,7 +5,7 @@ const count = ref(0)
 </script>
 
 <template>
-    <div>
+    <div id="info">
         <Card class="info">
             <template #header>
                 <div class="flex align-items-center justify-content-center">

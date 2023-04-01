@@ -5,8 +5,9 @@ import { useStore } from 'vuex';
 export default {
     setup() {
         const store = useStore();
+        const phone = computed(()=>store.getters.getPhone);
         const codePhone = ref('');
-        const isCodePhoneValid = ref(true);
+        const isCodePhoneValid = ref(false);
 
         const codePhoneErrorMessage = computed(() => {
             if (!isCodePhoneValid.value) {
@@ -15,28 +16,36 @@ export default {
         });
 
         const disabledButton = computed(() => {
-            if (isCodePhoneValid.value && codePhone.value.trim() !== '') {
+            if (isCodePhoneValid.value) {
                 return false;
             } else {
                 return true;
             }
         });
 
+        const resendCode = () =>{
+            store.commit('updateSendingCode');
+        }
+        
+
         const prevStep = () => {
             store.commit('prevStep');
         };
 
         const nextStep = () => {
-            store.commit('nextStep');
+            store.commit('updateSendingValidate');
         };
 
         watch(codePhone, (newVal) => {
-            isCodePhoneValid.value = newVal.length >= 6;
+            const regexTelefono = /^\+?[1-9]\d{5}$/
+            isCodePhoneValid.value = (regexTelefono.test(newVal.trim()));
         });
 
         return {
             prevStep,
             nextStep,
+            resendCode,
+            phone,
             codePhone,
             isCodePhoneValid,
             codePhoneErrorMessage,
@@ -66,7 +75,7 @@ export default {
                 Te enviamos un SMS al número:
             </span><br />
             <span class="font-bold text-2xl" style="color: white;">
-                +52 <img src="../../../assets/Group 4026.png" alt="">
+                {{ phone }} <img src="../../../assets/Group 4026.png" alt="">
             </span>
         </p>
     </div>
@@ -94,7 +103,7 @@ export default {
             <span class="text-1xl mb-4" style="color: white;">
                 ¿No recibiste el código?
             </span>
-            <span class="font-bold text-1xl underline custom-text" style="color: white;">
+            <span @click="resendCode" class="font-bold text-1xl underline custom-text" style="color: white;">
                 Reenviar código
             </span>
 

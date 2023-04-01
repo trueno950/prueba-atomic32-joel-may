@@ -15,7 +15,7 @@ export default {
         });
 
         const disabledButton = computed(() => {
-            if (isPhoneValid.value && phone.value.trim() !== '') {
+            if (isPhoneValid.value) {
                 return false;
             } else {
                 return true;
@@ -27,11 +27,13 @@ export default {
         };
 
         const nextStep = () => {
+            store.commit('updatePhone', phone.value)
             store.commit('nextStep');
         };
 
         watch(phone, (newVal) => {
-            isPhoneValid.value = newVal.length >= 5;
+            const regexTelefono = /^\+?[1-9]\d{9,11}$/
+            isPhoneValid.value = (regexTelefono.test(newVal.trim()));
         });
 
         return {
