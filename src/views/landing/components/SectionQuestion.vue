@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-
 const count = ref(0)
+
 </script>
 
 <template>
@@ -18,9 +18,9 @@ const count = ref(0)
             <template #content>
                 <div class="grid content-section">
                     <div class="col-4 align-items-center justify-content-center">
-                        <img src="../assets/Group 4041.png" alt="Mi imagen" class="image-card">
+                        <img src="../../../assets/Group 4041.png" alt="Mi imagen" class="image-card">
                         <div class="container">
-                            <img src="../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     Usamos las tecnologías más modernas.
@@ -28,7 +28,7 @@ const count = ref(0)
                             </p>
                         </div>
                         <div class="container mt-3">
-                            <img src="../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     Innovamos y creamos proyectos retadores.
@@ -37,9 +37,9 @@ const count = ref(0)
                         </div>
                     </div>
                     <div class="col-4 align-items-center justify-content-center">
-                        <img src="../assets/Group 4042.png" alt="" class="image-card">
+                        <img src="../../../assets/Group 4042.png" alt="" class="image-card">
                         <div class="container">
-                            <img src="../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     ¡Trabajamos en equipo rumbo al éxito!
@@ -47,7 +47,7 @@ const count = ref(0)
                             </p>
                         </div>
                         <div class="container mt-3">
-                            <img src="../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     No tenemos código de vestimenta.
@@ -56,9 +56,9 @@ const count = ref(0)
                         </div>
                     </div>
                     <div class="col-4 align-items-center justify-content-center">
-                        <img src="../assets/Group 4043.png" alt="" class="image-card">
+                        <img src="../../../assets/Group 4043.png" alt="" class="image-card">
                         <div class="container">
-                            <img src="../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     Realizamos actividades para tu bienestar.
@@ -66,7 +66,7 @@ const count = ref(0)
                             </p>
                         </div>
                         <div class="container mt-3">
-                            <img src="../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     ¡Tenemos un parque frente a la oficina!.
@@ -115,10 +115,10 @@ const count = ref(0)
                                                 </p>
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -130,10 +130,10 @@ const count = ref(0)
                                                 </p>
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -145,10 +145,10 @@ const count = ref(0)
                                                 </p>
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -161,7 +161,7 @@ const count = ref(0)
                                             </td>
                                             <td></td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -174,7 +174,7 @@ const count = ref(0)
                                             </td>
                                             <td></td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -187,7 +187,7 @@ const count = ref(0)
                                             </td>
                                             <td></td>
                                             <td class="text-center">
-                                                <img alt="" src="../assets/ic_check_tiny.png" />
+                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
                                             </td>
                                         </tr>
                                     </table>

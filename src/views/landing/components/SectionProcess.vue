@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-
 const count = ref(0)
+
 </script>
 
 <template>
@@ -44,7 +44,7 @@ const count = ref(0)
 
 <style scoped>
 .team {
-    background-image: url('../assets/Group 4040.png');
+    background-image: url('../../../assets/Group 4040.png');
     background-repeat: no-repeat;
     background-position: center;
     height: 25em;

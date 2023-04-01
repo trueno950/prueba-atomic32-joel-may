@@ -1,14 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useStore } from 'vuex'
 
-const count = ref(0)
+//const count = ref(0)
+const store = useStore();
+const count = computed(() => store.getters.getCount);
+console.log('store', count.value)
 </script>
 
 <template>
   <div>
     <Card>
       <template #header>
-        <img alt="user header"
+        <img alt=""
           src="https://static.wixstatic.com/media/1763b9_e442ddad423247d88c8705d7bdbe2a6e~mv2.png/v1/fill/w_162,h_42,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LogotipoAtomic32_Blco.png" />
       </template>
       <template #content>
@@ -46,7 +50,7 @@ const count = ref(0)
 .p-card {
   background: transparent;
   margin: 2em;
-  box-shadow:none;
+  box-shadow: none;
 }
 
 .p-card-header img {
@@ -57,7 +61,7 @@ const count = ref(0)
 }
 
 .astronauta {
-  background-image: url('../assets/Group 4032.png');
+  background-image: url('../../../assets/Group 4032.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
