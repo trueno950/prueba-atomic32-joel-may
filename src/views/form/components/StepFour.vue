@@ -1,6 +1,8 @@
 <script>
 import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
+import image1 from '../../../../public/assets/Group 4025@2x.png'
+import image2 from '../../../../public/assets/Group 4029.png'
 
 export default {
     setup() {
@@ -29,7 +31,9 @@ export default {
             nextStep,
             visible,
             checkTerms,
-            disabledButton
+            disabledButton,
+            image1,
+            image2,
         };
     }
 };
@@ -43,7 +47,7 @@ export default {
         </p>
     </div>
     <div class="flex align-items-center justify-content-start mt-5">
-        <img src="../../../assets/Group 4025@2x.png" class="mr-3">
+        <img :src="image1" class="mr-3">
         <p class="text-left white-space-nowrap">
             <span class="font-bold text-6xl" style="color: white;">TÉRMINOS Y </span>
             <span class="font-bold text-6xl" style="color: orangered;">CONDICIONES</span>
@@ -82,7 +86,7 @@ export default {
     <Dialog v-model:visible="visible" modal :style="{ width: '50vw' }" :draggable="false">
         <div class="flex align-items-center justify-content-center">
             <div class="text-center">
-                <img src="../../../assets/Group 4029.png" alt="">
+                <img :src="image2" alt="">
                 <p class="text-center">
                     <span class="font-bold text-1xl">Términos y Condiciones</span>
                 </p>

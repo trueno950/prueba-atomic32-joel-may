@@ -1,7 +1,17 @@
-<script setup>
-import { ref } from 'vue'
-const count = ref(0)
+<script>
+import image1 from '../../../../public/assets/Group 4035.png'
+import image2 from '../../../../public/assets/Group 4036.png'
+import image3 from '../../../../public/assets/Group 4037.png'
 
+export default {
+    setup() {
+        return {
+            image1,
+            image2,
+            image3,
+        }
+    }
+}
 </script>
 
 <template>
@@ -25,7 +35,7 @@ const count = ref(0)
                         <Card>
                             <template #title>
                                 <div class="flex align-items-center justify-content-center">
-                                    <img alt="user header" src="../../../assets/Group 4035.png" />
+                                    <img alt="user header" :src="image1" />
                                 </div>
                                 <p class="text-center">
                                     <span class="font-bold text-3xl" style="color: orangered;">- - -</span>
@@ -61,7 +71,7 @@ const count = ref(0)
                         <Card style="background-color: orangered;">
                             <template #title>
                                 <div class="flex align-items-center justify-content-center">
-                                    <img alt="user header" src="../../../assets/Group 4036.png" />
+                                    <img alt="user header" :src="image2" />
                                 </div>
                                 <p class="text-center">
                                     <span class="font-bold text-3xl" style="color: white;">- - -</span>
@@ -104,7 +114,7 @@ const count = ref(0)
                         <Card>
                             <template #title>
                                 <div class="flex align-items-center justify-content-center">
-                                    <img alt="user header" src="../../../assets/Group 4037.png" />
+                                    <img alt="user header" :src="image3" />
                                 </div>
                                 <p class="text-center">
                                     <span class="font-bold text-3xl" style="color: orangered;">- - -</span>

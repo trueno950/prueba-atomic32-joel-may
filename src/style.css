@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-image: url('./assets/Mask Group 1.png');
+  background-image: url('../public//assets/Mask Group 1.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

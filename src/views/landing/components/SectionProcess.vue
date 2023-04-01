@@ -1,12 +1,15 @@
 <script>
 import ButtonForm from './ButtonForm.vue';
+import image1 from '../../../../public/assets/Group 4040.png'
 
 export default {
     components: {
         ButtonForm
     },
     setup() {
-
+        return{
+            image1
+        }
     }
 }
 </script>
@@ -29,7 +32,7 @@ export default {
             <template #content>
                 <div class="grid ml-5">
                     <div class="col-12" >
-                        <img src="../../../assets/Group 4040.png" alt="">
+                        <img :src="image1" alt="" style="width: 90%;">
                     </div>
                     <div class="sm:col-6 md:col-4 lg:col-3 flex align-items-center justify-content-center">
                         <p><span class="font-bold text-2xl" style="color: white;">Contratación remota</span></p>

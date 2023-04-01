@@ -1,6 +1,7 @@
 <script>
 import { ref, computed, watch } from 'vue';
 import { useStore } from 'vuex';
+import image1 from '../../../../public/assets/Group 4015@2x.png'
 
 export default {
     setup() {
@@ -50,7 +51,8 @@ export default {
             isLastNameValid,
             nameErrorMessage,
             lastNameErrorMessage,
-            disabledButton
+            disabledButton,
+            image1
         };
     }
 };
@@ -58,7 +60,7 @@ export default {
 
 <template>
     <div class="flex align-items-center justify-content-start mt-5">
-        <img src="../../../assets/Group 4015@2x.png" class="mr-3">
+        <img :src="image1" class="mr-3">
         <p class="text-left white-space-nowrap">
             <span class="font-bold text-6xl" style="color: white;">TE QUEREMOS </span>
             <span class="font-bold text-6xl" style="color: orangered;">CONOCER</span>

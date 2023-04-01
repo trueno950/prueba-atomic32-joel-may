@@ -1,10 +1,17 @@
 <script>
 import { ref } from 'vue'
+import image1 from '../../../../public/assets/linkedin.png'
+import image2 from '../../../../public/assets/twitter.png'
+import image3 from '../../../../public/assets/Group 4029.png'
+
 export default {
     setup() {
         const visible = ref(false);
         return {
-            visible
+            visible,
+            image1,
+            image2,
+            image3,
         }
     }
 }
@@ -23,17 +30,17 @@ export default {
             </p>
         </div>
         <div class="sm:col-1 md:col-1 lg:col-1">
-            <img alt="" src="../../../assets/linkedin.png" />
+            <img alt="" :src="image1" />
         </div>
         <div class="sm:col-1 md:col-1 lg:col-1">
-            <img alt="" src="../../../assets/twitter.png" class="mt-2" />
+            <img alt="" :src="image2" class="mt-2" />
         </div>
     </div>
 
     <Dialog v-model:visible="visible" modal :style="{ width: '50vw' }" :draggable="false">
         <div class="flex align-items-center justify-content-center">
             <div class="text-center">
-                <img src="../../../assets/Group 4029.png" alt="">
+                <img :src="image3" alt="">
                 <p class="text-center">
                     <span class="font-bold text-1xl">Aviso de privacidad</span>
                 </p>

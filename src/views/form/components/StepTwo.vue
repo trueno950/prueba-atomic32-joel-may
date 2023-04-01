@@ -1,6 +1,7 @@
 <script>
 import { ref, computed, watch } from 'vue';
 import { useStore } from 'vuex';
+import image1 from '../../../../public/assets/Group 4023@2x.png'
 
 export default {
     setup() {
@@ -42,7 +43,8 @@ export default {
             phone,
             isPhoneValid,
             phoneErrorMessage,
-            disabledButton
+            disabledButton,
+            image1
         };
     }
 };
@@ -56,7 +58,7 @@ export default {
         </p>
     </div>
     <div class="flex align-items-center justify-content-start mt-5">
-        <img src="../../../assets/Group 4023@2x.png" class="mr-3">
+        <img :src="image1" class="mr-3">
         <p class="text-left white-space-nowrap">
             <span class="font-bold text-6xl" style="color: white;">VALIDA TU </span>
             <span class="font-bold text-6xl" style="color: orangered;">CELULAR</span>

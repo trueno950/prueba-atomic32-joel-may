@@ -1,12 +1,21 @@
 <script>
 import ButtonForm from './ButtonForm.vue';
+import image1 from '../../../../public/assets/ic_check_tiny.png';
+import image2 from '../../../../public/assets/Group 4041.png';
+import image3 from '../../../../public/assets/Group 4042.png';
+import image4 from '../../../../public/assets/Group 4043.png';
 
 export default {
     components: {
         ButtonForm
     },
     setup() {
-
+        return {
+            image1,
+            image2,
+            image3,
+            image4
+        }
     }
 }
 </script>
@@ -29,9 +38,9 @@ export default {
             <template #content>
                 <div class="grid content-section">
                     <div class="sm:col-12 md:col-6 lg:col-4 align-items-center justify-content-center">
-                        <img src="../../../assets/Group 4041.png" alt="" class="image-card">
+                        <img :src="image2" alt="" class="image-card">
                         <div class="container">
-                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img :src="image1" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     Usamos las tecnologías más modernas.
@@ -39,7 +48,7 @@ export default {
                             </p>
                         </div>
                         <div class="container mt-3">
-                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img :src="image1" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     Innovamos y creamos proyectos retadores.
@@ -48,9 +57,9 @@ export default {
                         </div>
                     </div>
                     <div class="sm:col-12 md:col-6 lg:col-4 align-items-center justify-content-center">
-                        <img src="../../../assets/Group 4042.png" alt="" class="image-card">
+                        <img :src="image3" alt="" class="image-card">
                         <div class="container">
-                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img :src="image1" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     ¡Trabajamos en equipo rumbo al éxito!
@@ -58,7 +67,7 @@ export default {
                             </p>
                         </div>
                         <div class="container mt-3">
-                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img :src="image1" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     No tenemos código de vestimenta.
@@ -67,9 +76,9 @@ export default {
                         </div>
                     </div>
                     <div class="sm:col-12 md:col-6 lg:col-4 align-items-center justify-content-center">
-                        <img src="../../../assets/Group 4043.png" alt="" class="image-card">
+                        <img :src="image4" alt="" class="image-card">
                         <div class="container">
-                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img :src="image1" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     Realizamos actividades para tu bienestar.
@@ -77,7 +86,7 @@ export default {
                             </p>
                         </div>
                         <div class="container mt-3">
-                            <img src="../../../assets/ic_check_tiny.png" alt="Mi imagen" class="image">
+                            <img :src="image1" alt="Mi imagen" class="image">
                             <p class="text">
                                 <span class="text font-bold text-1xl" style="color: white;">
                                     ¡Tenemos un parque frente a la oficina!.
@@ -126,10 +135,10 @@ export default {
                                                 </p>
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -141,10 +150,10 @@ export default {
                                                 </p>
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -156,10 +165,10 @@ export default {
                                                 </p>
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -172,7 +181,7 @@ export default {
                                             </td>
                                             <td></td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -185,7 +194,7 @@ export default {
                                             </td>
                                             <td></td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -198,7 +207,7 @@ export default {
                                             </td>
                                             <td></td>
                                             <td class="text-center">
-                                                <img alt="" src="../../../assets/ic_check_tiny.png" />
+                                                <img alt="" :src="image1" />
                                             </td>
                                         </tr>
                                     </table>

@@ -1,6 +1,8 @@
 <script>
 import { ref, computed, watch } from 'vue';
 import { useStore } from 'vuex';
+import image1 from '../../../../public/assets/Group 4024@2x.png'
+import image2 from '../../../../public/assets/Group 4026.png'
 
 export default {
     setup() {
@@ -49,7 +51,9 @@ export default {
             codePhone,
             isCodePhoneValid,
             codePhoneErrorMessage,
-            disabledButton
+            disabledButton,
+            image1,
+            image2,
         };
     }
 };
@@ -63,7 +67,7 @@ export default {
         </p>
     </div>
     <div class="flex align-items-center justify-content-start mt-5">
-        <img src="../../../assets/Group 4024@2x.png" class="mr-3">
+        <img :src="image1" class="mr-3">
         <p class="text-left white-space-nowrap">
             <span class="font-bold text-6xl" style="color: white;">CÓDIGO DE </span>
             <span class="font-bold text-6xl" style="color: orangered;">VERIFICACIÓN</span>
@@ -75,7 +79,7 @@ export default {
                 Te enviamos un SMS al número:
             </span><br />
             <span class="font-bold text-2xl" style="color: white;">
-                {{ phone }} <img src="../../../assets/Group 4026.png" alt="">
+                {{ phone }} <img :src="image2" alt="">
             </span>
         </p>
     </div>

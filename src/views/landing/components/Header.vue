@@ -1,5 +1,6 @@
 <script>
 import ButtonForm from './ButtonForm.vue';
+import image1 from '../../../../public/assets/Group 4032.png'
 
 export default {
   components: {
@@ -10,7 +11,8 @@ export default {
       window.location.href = '#info';
     }
     return {
-      goToInfo
+      goToInfo,
+      image1,
     }
   }
 }
@@ -26,7 +28,7 @@ export default {
       <template #content>
         <div class="grid mt-3">
           <div class="lg:col-6 sm:col-12 sm:col-12">
-            <img src="../../../assets/Group 4032.png" class="ml-7">
+            <img :src="image1" class="ml-7">
           </div>
           <div class="lg:col-6 sm:col-12 sm:col-12 align-content-center">
             <div class="flex align-items-center justify-content-center">
@@ -67,13 +69,6 @@ export default {
   margin-top: 10px;
   margin-left: 20px;
   width: 10%;
-}
-
-.astronauta {
-  background-image: url('../../../assets/Group 4032.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .p-button.p-button-info {

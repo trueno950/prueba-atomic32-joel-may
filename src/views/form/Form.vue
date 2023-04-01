@@ -8,6 +8,12 @@ import StepTwo from './components/StepTwo.vue';
 import StepThree from './components/StepThree.vue';
 import StepFour from './components/StepFour.vue';
 import FormSend from './components/FormSend.vue';
+import image1 from '../../../public/assets/Group 4033.png'
+import image2 from '../../../public/assets/Group 4034.png'
+import image3 from '../../../public/assets/Group 4038.png'
+import image4 from '../../../public/assets/Group 4039.png'
+import image5 from '../../../public/assets/sending-code.png'
+import image6 from '../../../public/assets/checkmark@2x.png'
 
 export default {
   components: {
@@ -49,6 +55,12 @@ export default {
       progress,
       sendingCode,
       sendingValidate,
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
       goToHome,
       nextStep,
       prevStep,
@@ -88,17 +100,17 @@ export default {
           </div>
           <div class="col-3">
             <div class="flex align-items-center justify-content-center mr-6">
-              <img src="../../assets/Group 4033.png" alt="" v-if="step === 1">
-              <img src="../../assets/Group 4034.png" alt="" v-if="step === 2 || step === 3" class="astronauta">
-              <img src="../../assets/Group 4038.png" alt="" v-if="step === 4">
-              <img src="../../assets/Group 4039.png" alt="" v-if="step === 5" class="astronauta2">
+              <img :src="image1" alt="" v-if="step === 1">
+              <img :src="image2" alt="" v-if="step === 2 || step === 3" class="astronauta">
+              <img :src="image3" alt="" v-if="step === 4">
+              <img :src="image4" alt="" v-if="step === 5" class="astronauta2">
             </div>
           </div>
         </div>
 
         <div class="grid" v-if="!sendingCode || !sendingValidate">
           <div class="col-12" v-if="sendingCode" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="../../assets/sending-code.png" alt="" class="paper mt-8"><br />
+            <img :src="image5" alt="" class="paper mt-8"><br />
             <p class="text-center" style="margin: 2em 0em 13.5em 0em;">
               <span class="font-bold text-3xl" style="color: white;">
                 Te estamos reenviando el código
@@ -106,7 +118,7 @@ export default {
             </p>
           </div>
           <div class="col-12" v-if="sendingValidate" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="../../assets/checkmark@2x.png" class="paper mt-8"><br />
+            <img :src="image6" class="paper mt-8"><br />
             <p class="text-center" style="margin: 2em 0em 13.5em 0em;">
               <span class="font-bold text-3xl" style="color: white;">
                 Hemos validado el código
