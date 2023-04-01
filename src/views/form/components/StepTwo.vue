@@ -1,0 +1,104 @@
+<script>
+import { ref, computed, watch } from 'vue';
+import { useStore } from 'vuex';
+
+export default {
+    setup() {
+        const store = useStore();
+        const phone = ref('');
+        const isPhoneValid = ref(true);
+
+        const phoneErrorMessage = computed(() => {
+            if (!isPhoneValid.value) {
+                return 'El número de celular debe contener 10 dígitos';
+            }
+        });
+
+        const disabledButton = computed(() => {
+            if (isPhoneValid.value && phone.value.trim() !== '') {
+                return false;
+            } else {
+                return true;
+            }
+        });
+
+        const prevStep = () => {
+            store.commit('prevStep');
+        };
+
+        const nextStep = () => {
+            store.commit('nextStep');
+        };
+
+        watch(phone, (newVal) => {
+            isPhoneValid.value = newVal.length >= 5;
+        });
+
+        return {
+            prevStep,
+            nextStep,
+            phone,
+            isPhoneValid,
+            phoneErrorMessage,
+            disabledButton
+        };
+    }
+};
+</script>
+
+<template>
+    <div>
+        <p @click="prevStep" class="custom-text">
+            <i class="pi pi-chevron-left px-2" style="color: white"></i>
+            <span class="font-bold text-1xl" style="color: white;">Regresar</span>
+        </p>
+    </div>
+    <div class="flex align-items-center justify-content-start mt-5">
+        <img src="../../../assets/Group 4023@2x.png" class="mr-3">
+        <p class="text-left white-space-nowrap">
+            <span class="font-bold text-6xl" style="color: white;">VALIDA TU </span>
+            <span class="font-bold text-6xl" style="color: orangered;">CELULAR</span>
+        </p>
+    </div>
+    <div class="flex align-items-center justify-content-start">
+        <p class="text-left white-space-nowrap">
+            <span class="font-bold text-3xl" style="color: white;">
+                Necesitamos validar tu número para continuar
+            </span><br />
+            <span class="font-bold text-2xl" style="color: white;">
+                Ingresa tu número a 10 dígitos y te enviaremos un código SMS
+            </span>
+        </p>
+    </div>
+    <div class="flex align-items-center justify-content-start">
+        <div class="flex flex-column gap-2">
+            <label for="last-name" class="text-1xl" style="color: white;">Número de Celular</label>
+            <span class="p-input-icon-right">
+                <i class="pi pi-phone" />
+                <InputText id="last-name" v-model="phone" aria-describedby="last-name-help"
+                    :class="{ 'p-invalid': !isPhoneValid }" :error-message="phoneErrorMessage" />
+            </span>
+            <small class="p-error" id="text-error">{{ phoneErrorMessage || '&nbsp;' }}</small>
+        </div>
+
+    </div>
+    <div class="flex align-items-center justify-content-end mr-8">
+        <Button :disabled="disabledButton" @click="nextStep" class="mr-8">Continuar</Button>
+    </div>
+</template>
+
+<style scoped>
+.p-input-icon-right {
+    display: grid
+}
+
+.p-button {
+    color: #ffffff;
+    background: orangered;
+    border: 1px solid orangered;
+    padding: 0.5rem 3.75rem;
+    font-size: 1rem;
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    border-radius: 20px;
+}
+</style>

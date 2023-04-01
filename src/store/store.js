@@ -2,7 +2,7 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    step: 1,
+    step: 5,
     progress: 25
   },
   mutations: {

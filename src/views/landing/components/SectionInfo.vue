@@ -150,6 +150,11 @@ const count = ref(0)
     box-shadow: none;
 }
 
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .cards-container {
     position: relative;
     display: flex;

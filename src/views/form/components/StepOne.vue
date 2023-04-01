@@ -5,27 +5,52 @@ import { useStore } from 'vuex';
 export default {
     setup() {
         const store = useStore();
+        const name = ref('');
         const lastName = ref('');
+        const isNameValid = ref(true);
         const isLastNameValid = ref(true);
-
-        watch(lastName, (newVal) => {
-            isLastNameValid.value = newVal.length >= 5;
-        });
 
         const lastNameErrorMessage = computed(() => {
             if (!isLastNameValid.value) {
                 return 'Los apellidos deben tener al menos 5 caracteres';
             }
         });
+
+
+        const nameErrorMessage = computed(() => {
+            if (!isNameValid.value) {
+                return 'El nombre debe tener al menos 3 caracteres';
+            }
+        });
+
+        const disabledButton = computed(() => {
+            if (isLastNameValid.value && isNameValid.value && name.value.trim() !== '' && lastName.value.trim() !== '') {
+                return false;
+            } else {
+                return true;
+            }
+        });
         const nextStep = () => {
             store.commit('nextStep');
         };
 
+        watch(lastName, (newVal) => {
+            isLastNameValid.value = newVal.length >= 5;
+        });
+
+        watch(name, (newVal) => {
+            isNameValid.value = newVal.length >= 3;
+        });
+
         return {
             nextStep,
+            name,
             lastName,
+            isNameValid,
             isLastNameValid,
-            lastNameErrorMessage
+            nameErrorMessage,
+            lastNameErrorMessage,
+            disabledButton
         };
     }
 };
@@ -51,8 +76,10 @@ export default {
             <label for="name" class="text-1xl" style="color: white;">Nombre(s)</label>
             <span class="p-input-icon-right">
                 <i class="pi pi-lock" />
-                <InputText id="name" aria-describedby="name-help" />
+                <InputText id="name" v-model="name" aria-describedby="name-help" :class="{ 'p-invalid': !isNameValid }"
+                    :error-message="nameErrorMessage" />
             </span>
+            <small class="p-error" id="text-error">{{ nameErrorMessage || '&nbsp;' }}</small>
         </div>
     </div>
     <div class="flex align-items-center justify-content-start">
@@ -68,29 +95,23 @@ export default {
 
     </div>
     <div class="flex align-items-center justify-content-end mr-8">
-        <Button @click="nextStep" class="mr-8">Enviar</Button>
+        <Button :disabled="disabledButton" @click="nextStep" class="mr-8">Enviar</Button>
     </div>
 </template>
 
 <style scoped>
-.p-card {
-    background: transparent;
-    margin: 2em;
-    box-shadow: none;
-}
-
-.p-card-header img {
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 20px;
-    width: 10%;
-}
-
-.p-progressbar-value {
-    background: orangered !important;
-}
 
 .p-input-icon-right {
     display: grid
+}
+
+.p-button {
+    color: #ffffff;
+    background: orangered;
+    border: 1px solid orangered;
+    padding: 0.5rem 3.75rem;
+    font-size: 1rem;
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    border-radius: 20px;
 }
 </style>

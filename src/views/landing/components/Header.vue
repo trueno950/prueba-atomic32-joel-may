@@ -1,11 +1,14 @@
-<script setup>
-import { ref, computed } from 'vue'
-import { useStore } from 'vuex'
+<script>
+import ButtonForm from './ButtonForm.vue';
 
-//const count = ref(0)
-const store = useStore();
-const count = computed(() => store.getters.getCount);
-console.log('store', count.value)
+export default {
+    components: {
+        ButtonForm
+    },
+    setup() {
+
+    }
+}
 </script>
 
 <template>
@@ -17,20 +20,20 @@ console.log('store', count.value)
       </template>
       <template #content>
         <div class="grid mt-3">
-          <div class="col-6 astronauta"></div>
+          <div class="col-6">
+            <img src="../../../assets/Group 4032.png" class="ml-7">
+          </div>
           <div class="col-6 align-content-center">
             <div class="flex align-items-center justify-content-center">
-              <p class="text-center white-space-nowrap">
-                <span class="font-bold text-7xl" style="color: white;">Desarrolla todo </span><br />
-                <span class="font-bold text-7xl" style="color: orangered;">tu POTENCIAL </span><br />
-                <span class="font-bold text-6xl" style="color: white;">dentro del equipo</span><br />
-                <span class="font-bold text-8xl" style="color: orangered; font-size: 4em;">ATOMIC</span>
-                <span class="font-bold text-8xl" style="color: white;">LABS</span>
+              <p class="text-justify">
+                <span class="font-bold" style="color: white; font-size: 4.2em;">Desarrolla todo </span><br />
+                <span class="font-bold" style="color: orangered; font-size: 4.5em;">tu POTENCIAL </span><br />
+                <span class="font-bold" style="color: white; font-size: 3.6em;">dentro del equipo</span><br />
+                <span class="font-bold" style="color: orangered; font-size: 4.5em;">ATOMIC</span>
+                <span class="font-bold" style="color: white; font-size: 4.5em;">LABS</span>
               </p>
             </div>
-            <div class="flex align-items-center justify-content-center">
-              <Button label="¡Quiero ser parte!" severity="info" rounded class="p-button-lg" />
-            </div>
+            <ButtonForm />
           </div>
         </div>
       </template>
@@ -70,6 +73,7 @@ console.log('store', count.value)
 .p-button.p-button-info {
   color: #2d6cf5;
   background: #ffffff;
+  width: 14em;
 }
 
 .p-button.p-button-secondary.p-button-outlined {

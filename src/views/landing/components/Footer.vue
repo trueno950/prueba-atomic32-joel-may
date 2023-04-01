@@ -5,15 +5,15 @@ const count = ref(0)
 </script>
 
 <template>
-    <div class="grid footer-contain">
+    <div class="grid footer-contain p-component">
         <div class="col-8">
             <p class="ml-7">
                 <span class="font-bold text-1xl">2023 AtomicLabs. Todos los derechos reservados.</span>
             </p>
         </div>
         <div class="col-2">
-            <p>
-                <span class="font-bold text-1xl">Aviso de privacidad</span>
+            <p class="text-left">
+                <span class="font-bold text-1xl underline">Aviso de privacidad</span>
             </p>
         </div>
         <div class="col-2">

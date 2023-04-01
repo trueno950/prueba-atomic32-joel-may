@@ -1,7 +1,14 @@
-<script setup>
-import { ref } from 'vue'
-const count = ref(0)
+<script>
+import ButtonForm from './ButtonForm.vue';
 
+export default {
+    components: {
+        ButtonForm
+    },
+    setup() {
+
+    }
+}
 </script>
 
 <template>
@@ -196,9 +203,7 @@ const count = ref(0)
                         </Card>
                     </div>
                 </div>
-                <div class="flex align-items-center justify-content-center mt-5">
-                    <Button label="¡Quiero ser parte!" severity="info" rounded class="p-button-lg" />
-                </div>
+                <ButtonForm />
             </template>
         </Card>
     </div>
@@ -226,6 +231,7 @@ const count = ref(0)
 .p-button.p-button-info {
     color: #2d6cf5;
     background: #ffffff;
+    width: 14em;
 }
 
 .title-section {
