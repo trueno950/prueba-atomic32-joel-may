@@ -68,13 +68,13 @@ export default {
     </div>
     <div class="flex align-items-center justify-content-start mt-5">
         <img :src="image1" class="mr-3">
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="font-bold text-6xl" style="color: white;">CÓDIGO DE </span>
             <span class="font-bold text-6xl" style="color: orangered;">VERIFICACIÓN</span>
         </p>
     </div>
     <div class="flex align-items-center justify-content-start">
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="font-bold text-3xl" style="color: white;">
                 Te enviamos un SMS al número:
             </span><br />
@@ -84,7 +84,7 @@ export default {
         </p>
     </div>
     <div>
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="font-bold text-1xl mb-4" style="color: white;">
                 Ingresa el código de verificación:
             </span>
@@ -103,7 +103,7 @@ export default {
 
     </div>
     <div>
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="text-1xl mb-4" style="color: white;">
                 ¿No recibiste el código?
             </span>
@@ -119,6 +119,11 @@ export default {
 </template>
 
 <style scoped>
+@media only screen and (max-width: 576px) {
+  .text-6xl {
+    font-size: 1.5rem !important;
+  }
+}
 .p-input-icon-right {
     display: grid
 }

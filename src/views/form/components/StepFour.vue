@@ -48,20 +48,20 @@ export default {
     </div>
     <div class="flex align-items-center justify-content-start mt-5">
         <img :src="image1" class="mr-3">
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="font-bold text-6xl" style="color: white;">TÉRMINOS Y </span>
             <span class="font-bold text-6xl" style="color: orangered;">CONDICIONES</span>
         </p>
     </div>
     <div class="flex align-items-center justify-content-start mt-2">
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="font-bold text-2xl" style="color: white;">
                 Por favor revisa nuestros términos y condiciones para este servicio:
             </span>
         </p>
     </div>
     <div class="flex align-items-center justify-content-start mb-2">
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span @click="visible = true" class="font-bold text-1xl underline custom-text" style="color: white;">
                 Consulta Términos y Condiciones
             </span>
@@ -73,7 +73,7 @@ export default {
                 <Checkbox v-model="checkTerms" :binary="true" />
             </div>
         </div>
-        <p class="text-left white-space-nowrap">
+        <p class="text-left">
             <span class="font-semibold text-0xl" style="color: white;">
                 Acepto los Términos y Condiciones
             </span>
@@ -160,6 +160,11 @@ export default {
 </template>
 
 <style scoped>
+@media only screen and (max-width: 576px) {
+  .text-6xl {
+    font-size: 1.5rem !important;
+  }
+}
 .p-input-icon-right {
     display: grid
 }
@@ -176,5 +181,12 @@ export default {
     font-size: 1rem;
     transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
     border-radius: 20px;
+}
+
+/* Small screens (phones) */
+@media only screen and (max-width: 576px) {
+  .text-6xl {
+    font-size: 1rem !important;
+  }
 }
 </style>
